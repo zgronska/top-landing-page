@@ -8,29 +8,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="hero">
+    <header class="hero dark-bg">
       <nav>
         <div class="header-logo">Header Logo</div>
         <ul>
-          <li class="nav-link"><a href="">header link 1</a></li>
+          <li class="nav-link"><a href="">Header link 1</a></li>
           <li class="nav-link"><a href="">header link 2</a></li>
           <li class="nav-link"><a href="">header link 3</a></li>
         </ul>
       </nav>
-      <div class="hero-content">
-        <h1 class="hero-title">This website is awesome</h1>
-        <p class="hero-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere
-          quas, iste, amet ipsam inventore magnam non provident exercitationem,
-          veritatis temporibus aliquam enim cupiditate vero at odio veniam quod
-          modi?
-        </p>
-        <button class="btn btn-hero">Sign up</button>
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">This website is awesome</h1>
+          <p class="hero-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+            facere quas, iste, amet ipsam inventore magnam non provident
+            exercitationem, veritatis temporibus aliquam enim cupiditate vero at
+            odio veniam quod modi?
+          </p>
+          <a href=""
+            ><button class="btn btn-hero"><span>Sign up</span></button></a
+          >
+        </div>
+        <div class="hero-img-container">
+          <img
+            src="https://images.unsplash.com/photo-1550681560-af9bc1cb339e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+            alt="Coffee beans in a white mug"
+            class="hero-img" />
+        </div>
       </div>
-      <img src="" alt="" class="hero-img" />
     </header>
     <main>
-      <section class="random-info">
+      <section class="random-info white-bg">
         <h2 class="section-title">Some random information.</h2>
         <div class="flex-container">
           <figure class="card">
@@ -71,7 +80,7 @@
           </figure>
         </div>
       </section>
-      <section class="quote-section">
+      <section class="quote-section grey-bg">
         <p class="quote">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
           doloribus eos distinctio ad fugit consectetur omnis quod minima
@@ -80,14 +89,14 @@
         </p>
         <p class="quote-author">Author</p>
       </section>
-      <section class="cta-section">
+      <section class="cta-section blue-bg">
         <div class="cta-text">
           <h3>Call to action! It's time!</h3>
           <p>Sign up for our product by clicking that button over there!</p>
         </div>
-        <button class="btn btn-cta">Sign up</button>
+        <a href=""><button class="btn btn-cta">Sign up</button></a>
       </section>
     </main>
-    <footer>Copyright © The Odin Project 2023</footer>
+    <footer class="dark-bg">Copyright © The Odin Project 2023</footer>
   </body>
 </html>
