@@ -137,6 +137,28 @@ section {
   box-shadow: inset 200px 0 0 0 var(--btn-bg-hover);
 }
 
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: -0.3em;
+  right: 0;
+  width: 0;
+  height: 0.1em;
+  background-color: var(--underline-color);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
 
 /*=============================================
 =            Header section            =
@@ -144,9 +166,10 @@ section {
 
 .hero {
   padding-inline: 10rem;
+  min-height: 100vh;
+  display: grid;
+  align-content: stretch;
 }
-
-
 
 /*----------  Navigation bar  ----------*/
 
@@ -173,26 +196,7 @@ nav ul {
 }
 
 .nav-link {
-  position: relative;
-}
-
-.nav-link::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent);
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .nav-link:hover::before {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
+  --underline-color: var(--accent)
 }
 
 /*----------  Hero section  ----------*/
@@ -222,6 +226,12 @@ nav ul {
 
 .hero-img {
   opacity: 0.7;
+  border-radius: 50% 20% / 10% 40%;
+  transition: all 0.3s ease-in;
+}
+
+.hero-img:hover {
+  opacity: 1;
 }
 
 .btn-hero {
@@ -250,25 +260,22 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.flex-container > * {
-  flex: 1;
+.card {
+  max-width: 12rem;
 }
 
-.card img {
-  aspect-ratio: 1 /1;
-  object-fit: cover;
-  border-radius: 1em;
-  border: 4px solid var(--accent);
-}
-
-.card .img-container {
-  position: relative;
+.img-container {
   overflow: hidden;
+  border: 0.25em solid var(--accent);
+  border-radius: 1em;
+  position: relative;
 }
 
-.card .img-container::before {
+.img-container::before {
   position: absolute;
   top: 0;
   left: -75%;
@@ -283,7 +290,7 @@ nav ul {
   transform: skewX(-25deg);
 }
 
-.card .img-container:hover::before {
+.img-container:hover::before {
   -webkit-animation: shine .75s;
   animation: shine .75s;
 }
@@ -298,6 +305,17 @@ nav ul {
   100% {
     left: 125%;
   }
+}
+
+.img-container img {
+  aspect-ratio: 1 /1;
+  object-fit: cover;
+  transform: scale(1.2);
+  transition: transform .5s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1);
 }
 
 .card figcaption {
@@ -341,9 +359,14 @@ nav ul {
   margin: 5rem 10rem;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 4rem;
+  padding: 3rem 4rem;
   gap: 1rem;
   justify-content: space-evenly;
+  box-shadow: 0.3px 0.5px 0.7px hsl(37deg 8% 34% / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(37deg 8% 34% / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(37deg 8% 34% / 0.36),
+    5px 10px 12.6px -2.5px hsl(37deg 8% 34% / 0.36);
+  ;
 }
 
 .btn-cta {
@@ -357,6 +380,27 @@ nav ul {
 
 /*=====  End of CTA section  ======*/
 
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+footer {
+  text-align: center;
+  padding-block: 2rem;
+}
+
+footer p {
+  padding: 0.2em;
+}
+
+footer a {
+  color: var(--accent);
+  --underline-color: var(--light);
+}
+
+/*=====  End of Footer  ======*/
 
 
 
