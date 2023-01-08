@@ -78,20 +78,33 @@ ul {
 
 body {
   font-family: var(--primary-font);
+  background: var(--light);
 }
 
 .grey-bg {
   background-color: var(--light-shade);
-  color: var(--dark);
+  color: var(--dark-shade);
 }
 
 .accent-bg {
   background-color: var(--accent);
-  color: var(--light-shade);
+  color: var(--dark-shade);
 }
 
 .dark-bg {
-  background-color: var(--dark);
+  background-image: linear-gradient(45deg,
+      hsl(300deg 20% 6%) 0%,
+      hsl(301deg 19% 6%) 4%,
+      hsl(301deg 19% 7%) 7%,
+      hsl(302deg 18% 7%) 12%,
+      hsl(303deg 18% 8%) 17%,
+      hsl(304deg 18% 8%) 22%,
+      hsl(304deg 17% 9%) 28%,
+      hsl(304deg 17% 9%) 35%,
+      hsl(304deg 17% 9%) 43%,
+      hsl(305deg 18% 10%) 53%,
+      hsl(305deg 18% 10%) 66%,
+      hsl(306deg 19% 11%) 99%);
   color: var(--light);
 }
 
@@ -125,6 +138,12 @@ body {
 
 .hero {
   padding-inline: 10rem;
+}
+
+section {
+  display: grid;
+  place-content: center;
+  padding: 5rem 10rem;
 }
 
 /*----------  Navigation bar  ----------*/
@@ -210,12 +229,48 @@ nav ul {
 /*=====  End of Header section  ======*/
 
 
+/*=============================================
+=            Random info section            =
+=============================================*/
+
+.section-title {
+  font-size: 2.25rem;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.flex-container > * {
+  flex: 1;
+}
+
+.card img {
+  aspect-ratio: 1 /1;
+  object-fit: cover;
+  border-radius: 1em;
+  border: 4px solid var(--accent);
+}
+
+.card figcaption {
+  padding-block: 1em;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/*=====  End of Random info section  ======*/
+
+
 
 .btn-cta {
   --btn-bg: none;
-  --btn-color: var(--light-shade);
-  --btn-border: 2px solid var(--light-shade);
-  --btn-bg-hover: var(--light-shade);
+  --btn-color: var(--dark-shade);
+  --btn-border: 2px solid var(--dark-shade);
+  --btn-bg-hover: var(--dark-shade);
   --btn-color-hover: var(--accent);
   --btn-border-hover: 2px solid var(--accent);
 }
@@ -226,7 +281,8 @@ nav ul {
 
 @media screen and (max-width: 800px) {
 
-  .hero {
+  .hero,
+  section {
     padding-inline: 2rem;
   }
 
