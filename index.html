@@ -46,7 +46,7 @@
         <div class="hero-img-container">
           <img
             loading="lazy"
-            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt="Interior of the cafe"
             class="hero-img" />
         </div>
@@ -60,7 +60,7 @@
             <div class="img-container">
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1565273975221-fe8dc98dba50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+                src="https://images.unsplash.com/photo-1565273975221-fe8dc98dba50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 alt="Burlap bags of coffee beans" />
             </div>
             <figcaption>
@@ -72,7 +72,7 @@
             <div class="img-container">
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1630595478874-eefd5083f210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+                src="https://images.unsplash.com/photo-1630595478874-eefd5083f210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 alt="Coffee beans next to a sealed coffee bag" />
             </div>
             <figcaption>
@@ -83,7 +83,7 @@
             <div class="img-container">
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 alt="Three coffee pistons with latte art, ground coffee, and coffee beans" />
             </div>
             <figcaption>
@@ -94,7 +94,7 @@
             <div class="img-container">
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1522992319-0365e5f11656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+                src="https://images.unsplash.com/photo-1522992319-0365e5f11656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 alt="Hot coffee being poured into a white mug" />
             </div>
             <figcaption>
@@ -115,7 +115,7 @@
           <div class="author-img-container">
             <img
               src="https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-              alt="Dark haired woman smiling" />
+              class="quote-pic" />
           </div>
           <span class="quote-author">Penny Lane</span>
         </div>
@@ -128,15 +128,168 @@
           </div>
           <a href=""><button class="btn btn-cta">Sign up</button></a>
         </div>
+        <div class="order-box">
+          <form action="/" class="order-form">
+            <i class="fa-solid fa-xmark"></i>
+            <h2>Order for pickup</h2>
+            <div class="form-item">
+              <label for="fname">First name:</label>
+              <input required type="text" name="fname" id="fname" />
+            </div>
+            <div class="form-item">
+              <label for="lname">Last name:</label>
+              <input required type="text" name="lname" id="lname" />
+            </div>
+            <div class="form-item">
+              <label for="email">E-mail:</label>
+              <input required type="email" name="email" id="email" />
+            </div>
+            <div class="form-item">
+              <label for="phone">Phone number:</label>
+              <input
+                required
+                type="number"
+                name="phone"
+                id="phone"
+                minlength="9"
+                maxlength="10" />
+            </div>
+            <h3>Products</h3>
+            <div class="form-item product">
+              <input type="checkbox" name="products" id="latte" value="latte" />
+              <label for="latte">Latte</label><span class="price">3.50</span>
+              <div class="form-item product-quantity">
+                <label for="latte-quantity">Quantity:</label
+                ><select name="latte-quantity" id="latte-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-item product">
+              <input
+                type="checkbox"
+                name="products"
+                id="espresso"
+                value="espresso" />
+              <label for="espresso">Espresso</label
+              ><span class="price">2.50</span>
+              <div class="form-item product-quantity">
+                <label for="espresso-quantity">Quantity:</label
+                ><select name="espresso-quantity" id="espresso-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-item product">
+              <input
+                type="checkbox"
+                name="products"
+                id="cappuccino"
+                value="cappuccino" />
+              <label for="cappuccino">Cappuccino</label
+              ><span class="price">3.30</span>
+              <div class="form-item product-quantity">
+                <label for="cappuccino-quantity">Quantity:</label
+                ><select name="cappuccino-quantity" id="cappuccino-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-item product">
+              <input
+                type="checkbox"
+                name="products"
+                id="americano"
+                value="americano" />
+              <label for="americano">Americano</label
+              ><span class="price">3.00</span>
+              <div class="form-item product-quantity">
+                <label for="americano-quantity">Quantity:</label
+                ><select name="americano-quantity" id="americano-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-item product">
+              <input
+                type="checkbox"
+                name="products"
+                id="flat-white"
+                value="flat-white" />
+              <label for="flat-white">Flat White</label
+              ><span class="price">3.30</span>
+              <div class="form-item product-quantity">
+                <label for="flat-white-quantity">Quantity:</label
+                ><select name="flat-white-quantity" id="flat-white-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="total">
+              <span>Total:</span><span class="total-amount price">0.00</span>
+            </div>
+            <div class="form-item">
+              <label for="pickup">Pickup time:</label>
+              <input required type="time" name="pickup" id="pickup" />
+            </div>
+            <input type="submit" value="Order now!" class="btn btn-form" />
+          </form>
+        </div>
       </section>
       <section class="grey-bg contact-section" id="contact">
         <h2 class="section-title">Contact</h2>
         <div class="contact-container">
           <address class="contact-box">
-            <i class="fa-solid fa-house"></i> <strong>CoolBeans</strong><br />16
-            Massey Court<br />Newark<br />England<br />United Kingdom<br /><br /><i
+            <!-- The contact details are fictional and generated by https://www.doogal.co.uk/RandomAddresses -->
+            <i class="fa-solid fa-house"></i> <strong>CoolBeans</strong><br />10
+            Maes Yr Haf<br />SA15 3ND Llanelli<br />Wales, United Kingdom<br /><br /><i
               class="fa-solid fa-phone"></i>
-            <a href="tel:+449050209865">+44 9050209865</a><br />
+            <a href="tel:+4401554221745">+44 (01554) 221745</a><br />
             <i class="fa-solid fa-envelope"></i>
             <a href="mailto:coolbeans@fakemail.com">coolbeans@fakemail.com</a>
           </address>
