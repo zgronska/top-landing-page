@@ -81,6 +81,7 @@ ul {
 body {
   font-family: var(--primary-font);
   background: var(--light);
+  transition: all 0.3s;
 }
 
 section {
@@ -161,6 +162,12 @@ section {
     right: auto;
     width: 100%;
   }
+}
+
+.underline-active::before {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 /*=============================================
@@ -512,10 +519,21 @@ footer a {
     height: 2rem;
     display: grid;
     place-content: center;
-    background: var(--light-shade);
-    color: var(--accent);
+    background: var(--accent);
+    color: var(--dark-shade);
     padding: 0.3em;
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+
+  #btn-toggle:hover {
+    background: var(--light-shade);
+    color: var(--accent);
+  }
+
+  #btn-toggle:active {
+    background: var(--light);
   }
 
   .menu {
