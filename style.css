@@ -2,10 +2,10 @@
 
 :root {
   --dark: #120C12;
-  --dark-shade: #20161F;
+  --dark-shade: hsl(306, 19%, 11%);
   --light: #9B9489;
   --light-shade: #756E63;
-  --accent: #DB924B;
+  --accent: #dc944c;
   --primary-font: 'Roboto', sans-serif;
 }
 
@@ -21,6 +21,7 @@
 
 * {
   margin: 0;
+  /* border: 1px solid red; */
 }
 
 html,
@@ -175,6 +176,10 @@ section {
 
 /*----------  Navigation bar  ----------*/
 
+#btn-toggle {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -183,16 +188,15 @@ nav {
   padding-block: 1em;
   gap: 0.5em;
   position: relative;
-  /* min-height: 4.5rem; */
   background: none;
-}
-
-.navbarOffsetMargin {
-  /* padding-top: 4.5rem; */
 }
 
 nav.sticky {
   background: var(--dark-shade);
+  box-shadow: 0px 0.5px 0.6px hsl(306, 19%, 11%, 0.2),
+    -0.1px 1.8px 2px -0.8px hsl(306, 19%, 11%, 0.2),
+    -0.3px 4.4px 5px -1.7px hsl(306, 19%, 11%, 0.2),
+    -0.8px 10.8px 12.2px -2.5px hsl(306, 19%, 11%, 0.2);
   padding-inline: 10rem;
   position: fixed;
   z-index: 999;
@@ -210,7 +214,7 @@ nav.sticky {
   color: var(--accent);
 }
 
-nav ul {
+.menu {
   display: flex;
   gap: 1em;
   color: var(--light-shade);
@@ -497,6 +501,38 @@ footer a {
 =============================================*/
 
 @media screen and (max-width: 800px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  #btn-toggle {
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-content: center;
+    background: var(--light-shade);
+    color: var(--accent);
+    padding: 0.3em;
+    border-radius: 50%;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: none;
+
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  nav.sticky {
+    padding-inline: 2rem;
+  }
 
   .hero,
   section {
@@ -507,14 +543,12 @@ footer a {
     margin-inline: 2rem;
   }
 
-  nav,
-  nav ul,
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .contact-container,
+  .cta-container {
     text-align: center;
   }
+
+
 }
 
 /*=====  End of Responsive layout  ======*/
