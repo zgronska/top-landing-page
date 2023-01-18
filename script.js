@@ -139,30 +139,25 @@ function slideshow() {
 
 slideshow();
 
-// Order form close
+// Order form open/close
 
 const formButton = document.querySelector("#form-toggle");
 const openFormButtons = document.querySelectorAll(".btn-open-form");
 const formEl = document.querySelector(".order-box");
 
-formButton.addEventListener("click", closeForm);
-openFormButtons.forEach((btn) => {
-  btn.addEventListener("click", openForm);
-});
-
 function closeForm() {
   formEl.classList.remove("active");
-  formEl.classList.add("display-none");
-  console.log("close");
 }
 
 function openForm() {
-  if (formEl.classList.contains("active")) {
-    return;
-  } else {
-    formEl.classList.remove("display-none");
-    formEl.classList.add("active");
-  }
-
-  console.log("open");
+  formEl.classList.add("active");
 }
+
+formButton.addEventListener("click", closeForm);
+
+openFormButtons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    openForm();
+    e.preventDefault(e);
+  });
+});
