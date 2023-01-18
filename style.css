@@ -133,7 +133,7 @@ section {
   border-radius: 0.5em;
   cursor: pointer;
   transition: ease-out 0.4s;
-  max-width: 10em;
+  max-width: 12em;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +142,7 @@ section {
 .btn:hover {
   color: var(--btn-color-hover);
   border: var(--btn-border-hover);
-  box-shadow: inset 10em 0 0 0 var(--btn-bg-hover);
+  box-shadow: inset 12em 0 0 0 var(--btn-bg-hover);
 }
 
 .underline {
